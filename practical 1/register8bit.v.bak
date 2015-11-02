@@ -1,0 +1,16 @@
+module register8bit #(parameter SIZE = 8)(IR,D,IRload,Clock,Reset);
+	
+	parameter SIZE = 8;
+	output reg [SIZE-1:0] IR;
+	input [SIZE-1:0] D;
+	input IRload, Clock, Reset;
+	//reg [SIZE-1:0] IR;
+
+ always @(posedge Clock or negedge Reset)
+
+ if (!Reset) 
+	IR <= 0;
+ else if (IRload) 
+	IR <= D;
+
+endmodule
