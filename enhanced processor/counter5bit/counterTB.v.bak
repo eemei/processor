@@ -1,0 +1,24 @@
+module counterTB();
+  
+   // Outputs
+   wire [4:0] Q;
+   // Inputs
+   reg [4:0]D;
+  integer i;
+
+
+
+   initial begin
+      // Initialize Inputs
+      D = 0;
+      for (i=0; i<32;i=i+1)begin
+     #2 $display ("out:%d",Q); end
+      #60 $finish;   
+   end
+
+ 
+      
+         // Instantiate the Unit Under Test (UUT)
+   counter uut (Q, D);
+
+endmodule

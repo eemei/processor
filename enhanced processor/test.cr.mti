@@ -1,0 +1,22 @@
+{C:/Users/lenovo/Desktop/BAME2044 ASIC&FPGA/practical 1/CU.v} {1 {vlog -work work -nocovercells {C:/Users/lenovo/Desktop/BAME2044 ASIC&FPGA/practical 1/CU.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module CU
+
+Top level modules:
+	CU
+
+} {} {}} C:/Users/lenovo/Desktop/ControlUnit.v {1 {vlog -work work -nocovercells C:/Users/lenovo/Desktop/ControlUnit.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module ControlUnit
+
+Top level modules:
+	ControlUnit
+
+} {} {}} {C:/Users/lenovo/Desktop/BAME2044 ASIC&FPGA/practical 1/CUtb.v} {1 {vlog -work work -nocovercells {C:/Users/lenovo/Desktop/BAME2044 ASIC&FPGA/practical 1/CUtb.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module CUtb
+
+Top level modules:
+	CUtb
+
+} {} {}}

@@ -1,0 +1,371 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\91\modelsim_ase\examples
+vaddsub
+IhkiPb]P9A[VW;zRQG[[_:3
+VXif`j5R6a1a[=COgB67Jh3
+Z0 dC:\altera\91\modelsim_ase\examples\enhanced processor
+w1447038264
+8H:/BAME2044ASICFPGA/AregisterTB/addsub.v
+FH:/BAME2044ASICFPGA/AregisterTB/addsub.v
+L0 1
+Z1 OV;L;6.5b;42
+r1
+31
+Z2 !s102 -nocovercells
+Z3 o-work work -nocovercells -O0
+!s100 E=7iLKQWCb7Y9UHXz<bcU3
+!s85 0
+!s101 -O0
+vaddTB
+I258>:GinZ9Vf]P1XQ;QQG0
+V;kUDfY[Xzk[b2zj4Xc^Ln1
+Z4 dC:\altera\91\modelsim_ase\examples\enhanced processor
+w1446971565
+8C:/altera/91/modelsim_ase/examples/enhanced processor/addsubTB/addTB.v
+FC:/altera/91/modelsim_ase/examples/enhanced processor/addsubTB/addTB.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nadd@t@b
+!s100 aPM5I]MS97AiPFiW@?c8D0
+!s85 0
+!s101 -O0
+vAregister
+IBKAmcNlz@JW[j?ZkBgGbb3
+V_Jn11Q86@6L2L7?;T=<b[3
+R4
+w1448293664
+8H:/BAME2044ASICFPGA/AregisterTB/Aregister.v
+FH:/BAME2044ASICFPGA/AregisterTB/Aregister.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@aregister
+!s100 2D^AZ=BCTBnRJm]>EARCG0
+!s85 0
+!s101 -O0
+vAregistertb
+IhVJ?lJ?R_QJnjmceS5iBl0
+VFnLeNWbAMb;2:WPIR3V]`2
+R4
+w1448293942
+8H:/BAME2044ASICFPGA/AregisterTB/Aregistertb.v
+FH:/BAME2044ASICFPGA/AregisterTB/Aregistertb.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@aregistertb
+!s100 a5c28:bh26H[`=<l0Mo?l3
+!s85 0
+!s101 -O0
+vbarrel
+IMGSl^mU3ZP7aZiRAYegO22
+V^>AMZH98okF<jMb7fn6=11
+R4
+w1447581602
+Z5 8C:/altera/91/modelsim_ase/examples/BarrelTB/barrel2.v
+Z6 FC:/altera/91/modelsim_ase/examples/BarrelTB/barrel2.v
+L0 3
+R1
+r1
+31
+R2
+R3
+!s100 Z1zbkhjQTLMmNQ]0[nQdm0
+!s85 0
+!s101 -O0
+vbarrel2
+IN=0E]9ioNeO`gKn9g8C3Y0
+VU:UClJ]MHlJK==cC_4F`32
+R4
+w1447677449
+R5
+R6
+L0 3
+R1
+r1
+31
+R2
+R3
+!s100 OM@G=E>`n@8F=4<02a=W:3
+!s85 0
+!s101 -O0
+vbarrel_me
+I;ZblWdSJkm<eDA<;`C3U50
+V>Z2bf53TLad6<A?dS[kLd0
+R4
+w1447591795
+8C:/altera/91/modelsim_ase/examples/enhanced processor/barrel_me.v
+FC:/altera/91/modelsim_ase/examples/enhanced processor/barrel_me.v
+L0 1
+R1
+r1
+31
+R2
+R3
+!s100 SnbeXZDDgAKNKj0_2kC7h2
+!s85 0
+!s101 -O0
+vBarrelTB
+I:5YHP8@4IbN;n`U0[gdgi0
+V_0bmOL85KWd7DAXERKmHX3
+R4
+w1447683680
+8C:/altera/91/modelsim_ase/examples/enhanced processor/BarrelTB.v
+FC:/altera/91/modelsim_ase/examples/enhanced processor/BarrelTB.v
+L0 3
+R1
+r1
+31
+R2
+R3
+n@barrel@t@b
+!s100 ?_A0kLLfGmnMOb3a7PE2H1
+!s85 0
+!s101 -O0
+vControlUnit
+Ioo>3=_COzCGoLVUXJL:oF3
+VZ<GI0mdUdV?YAPOkdNJSA1
+R4
+w1445353868
+8C:/Users/lenovo/Desktop/ControlUnit.v
+FC:/Users/lenovo/Desktop/ControlUnit.v
+L0 7
+R1
+r1
+31
+R2
+R3
+n@control@unit
+!s100 zLCVcK`<l=BRVDRRFio@P1
+!s85 0
+!s101 -O0
+vcounter
+IY<_aUEcmNbz0Gkm8DoS400
+V46z`8c>0U70;cjHjzK0>J0
+R4
+w1447039524
+8H:/BAME2044ASICFPGA/IRregister/counter.v
+FH:/BAME2044ASICFPGA/IRregister/counter.v
+L0 1
+R1
+r1
+31
+R2
+R3
+!s100 laCf`l31BPk4c^AB2;gAh0
+!s85 0
+!s101 -O0
+vcounterTB
+I:<?Pf>M6TSgi<>^190kd:0
+V=QdoT>h;3WfYUAF^fQcY61
+R4
+w1447040376
+8C:/altera/91/modelsim_ase/examples/enhanced processor/counter5bit/counterTB.v
+FC:/altera/91/modelsim_ase/examples/enhanced processor/counter5bit/counterTB.v
+L0 1
+R1
+r1
+31
+R2
+R3
+ncounter@t@b
+!s100 b0mD]9CC`D9b4MlQ0G;kj0
+!s85 0
+!s101 -O0
+vCU
+IKjGb5?ZkJo1VfH_58QVj20
+Ve>8n9Y9AT`2oZ_96B5Xe51
+R4
+w1445353914
+8C:/Users/lenovo/Desktop/BAME2044 ASIC&FPGA/practical 1/CU.v
+FC:/Users/lenovo/Desktop/BAME2044 ASIC&FPGA/practical 1/CU.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@c@u
+!s100 _=EElJz0QRmf<^Yg_7B1C1
+!s85 0
+!s101 -O0
+vCUtb
+IZ4e7j;eb]:kK[IDXbhDJ^2
+VK9IQZDXPH?7>BbfXjJ;=R0
+R4
+w1445352299
+8C:/Users/lenovo/Desktop/BAME2044 ASIC&FPGA/practical 1/CUtb.v
+FC:/Users/lenovo/Desktop/BAME2044 ASIC&FPGA/practical 1/CUtb.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@c@utb
+!s100 F]68CbaU9:jbThS4W9IWX1
+!s85 0
+!s101 -O0
+vIRregiester
+IdnbW64ga?j?8A>mA;G7Jm1
+VFMmHUzi3<WZaONVf<Pf3;2
+R4
+w1448297920
+8H:/BAME2044ASICFPGA/IRregister/IRregiester.v
+FH:/BAME2044ASICFPGA/IRregister/IRregiester.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@i@rregiester
+!s100 9_1>Gi[6?F2BBM:hM;`091
+!s85 0
+!s101 -O0
+vIRregTB
+IDLa3f81Ua8:2>1>`V3>=d1
+VCYViVFARhYT5ITQUHMi_O2
+R4
+w1448299090
+8H:/BAME2044ASICFPGA/IRregister/IRregTB.v
+FH:/BAME2044ASICFPGA/IRregister/IRregTB.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@i@rreg@t@b
+!s100 KJUMgRcV[RJg40^DPcikn1
+!s85 0
+!s101 -O0
+vmux1_2
+!s100 NGzed>IQ4<K0FUSYcCC>z2
+IMZ_6Bb3SZLc@bA@kgGbWX2
+V4FKA]mjdG^R22Ra[[]]BS0
+R4
+w1448298812
+8H:/BAME2044ASICFPGA/IRregister/mux1_2.v
+FH:/BAME2044ASICFPGA/IRregister/mux1_2.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s101 -O0
+R2
+R3
+vmux2_4
+Ib@ECkgaj9A0:NF[L2RkJE3
+V:<ldz?Qgg=XmoYiH9KIla0
+R4
+w1447038304
+8H:/BAME2044ASICFPGA/AregisterTB/mux2_4.v
+FH:/BAME2044ASICFPGA/AregisterTB/mux2_4.v
+L0 1
+R1
+r1
+31
+R2
+R3
+!s100 ]ei<Y5SM53z7i=a5;AKP[2
+!s85 0
+!s101 -O0
+vmux4TB
+IN0Li;ZTUmZdc[i?MVezHh3
+VYg5VFEHao>9zQ<gUSg6ON0
+R4
+w1446958259
+8C:/altera/91/modelsim_ase/examples/enhanced processor/Mux2_4TB/mux4TB.v
+FC:/altera/91/modelsim_ase/examples/enhanced processor/Mux2_4TB/mux4TB.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nmux4@t@b
+!s100 ??6:>B?a1I]ehSEmzc@MA3
+!s85 0
+!s101 -O0
+vRAM
+Ib_L6?cXK6:^0WEj3BG0b?1
+VU04Wb3]JD0AAWLe8JbmbK0
+R4
+w1446640493
+8C:/Users/lenovo/Desktop/processor/practical 1/RAM.v
+FC:/Users/lenovo/Desktop/processor/practical 1/RAM.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@r@a@m
+!s100 Ec1AXdAeln:h^SV9JDTUa0
+!s85 0
+!s101 -O0
+vRAMtb
+I?TT3Ae7[Dg;M=Jm7b4d9V0
+VEFn`6`@N17DdY=:VJmkdN3
+R4
+w1446640393
+8C:/Users/lenovo/Desktop/processor/practical 1/RAMtb.v
+FC:/Users/lenovo/Desktop/processor/practical 1/RAMtb.v
+L0 1
+R1
+r1
+31
+R2
+R3
+n@r@a@mtb
+!s100 Kj5XAPCT7j]Q0TjRQ4h[o3
+!s85 0
+!s101 -O0
+vregister8bit
+IOi3n?UGjkM_hCdzVd;@Oc2
+VLAJ=42jAZ@l>IzjzmRgo<3
+R4
+w1446960030
+8H:/BAME2044ASICFPGA/IRregister/register8bit.v
+FH:/BAME2044ASICFPGA/IRregister/register8bit.v
+L0 1
+R1
+r1
+31
+R2
+R3
+!s100 z`:C[m2jKhb8e<F5C>c<U2
+!s85 0
+!s101 -O0
+vregister8bitTB
+I0<n>LdZNAnQKeGIdO0KA<2
+VbVf0HLDl0a:5Z]Dgd:hc63
+R4
+w1446281759
+8C:/Users/lenovo/Desktop/BAME2044ASICFPGA/practical 1/register8bitTB.v
+FC:/Users/lenovo/Desktop/BAME2044ASICFPGA/practical 1/register8bitTB.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nregister8bit@t@b
+!s100 g@1O?F3m4i]0njm^JzAaJ3
+!s85 0
+!s101 -O0

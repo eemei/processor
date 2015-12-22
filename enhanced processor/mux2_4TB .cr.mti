@@ -1,0 +1,15 @@
+{C:/altera/91/modelsim_ase/examples/enhanced processor/Mux2_4TB/mux2_4.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/Mux2_4TB/mux2_4.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module mux2_4
+
+Top level modules:
+	mux2_4
+
+} {} {}} {C:/altera/91/modelsim_ase/examples/enhanced processor/Mux2_4TB/mux4TB.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/Mux2_4TB/mux4TB.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module mux4TB
+
+Top level modules:
+	mux4TB
+
+} {} {}}

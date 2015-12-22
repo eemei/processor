@@ -1,0 +1,29 @@
+H:/BAME2044ASICFPGA/AregisterTB/register8bit.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/AregisterTB/register8bit.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module register8bit
+
+Top level modules:
+	register8bit
+
+} {} {}} H:/BAME2044ASICFPGA/AregisterTB/Aregister.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/AregisterTB/Aregister.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module Aregister
+
+Top level modules:
+	Aregister
+
+} {} {}} H:/BAME2044ASICFPGA/AregisterTB/addsub.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/AregisterTB/addsub.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module addsub
+
+Top level modules:
+	addsub
+
+} {} {}} H:/BAME2044ASICFPGA/AregisterTB/mux2_4.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/AregisterTB/mux2_4.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module mux2_4
+
+Top level modules:
+	mux2_4
+
+} {} {}}

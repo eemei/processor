@@ -1,0 +1,15 @@
+{C:/altera/91/modelsim_ase/examples/enhanced processor/addsubTB/addTB.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/addsubTB/addTB.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module addTB
+
+Top level modules:
+	addTB
+
+} {} {}} {C:/altera/91/modelsim_ase/examples/enhanced processor/addsubTB/addsub.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/addsubTB/addsub.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module addsub
+
+Top level modules:
+	addsub
+
+} {} {}}

@@ -1,0 +1,15 @@
+{C:/Users/lenovo/Desktop/processor/practical 1/RAMtb.v} {1 {vlog -work work -nocovercells {C:/Users/lenovo/Desktop/processor/practical 1/RAMtb.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module RAMtb
+
+Top level modules:
+	RAMtb
+
+} {} {}} {C:/Users/lenovo/Desktop/processor/practical 1/RAM.v} {1 {vlog -work work -nocovercells {C:/Users/lenovo/Desktop/processor/practical 1/RAM.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module RAM
+
+Top level modules:
+	RAM
+
+} {} {}}

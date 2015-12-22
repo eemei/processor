@@ -1,0 +1,22 @@
+module mux2_4TB();
+  //output wire, input reg
+ 	reg [1:0]sel;
+	reg [7:0]a, b, c, d; 
+	wire [7:0] Q;
+	
+	//instatiate
+	mux2_4 mux2_4TB(sel, a, b, c, d, Q);
+	
+	initial begin 
+	a=2'b0000001;
+	b=2'b0000011;
+	c=2'b0000111;
+	d=2'b0001111;
+	sel = 0;
+	#2 sel = 2'b01;
+	#2 sel = 2'b10;
+	#2 sel = 2'b11;
+	#2 sel = 2'b00;
+	end
+	
+	endmodule 

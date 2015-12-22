@@ -1,0 +1,36 @@
+H:/BAME2044ASICFPGA/IRregister/counter.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/IRregister/counter.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} H:/BAME2044ASICFPGA/IRregister/mux1_2.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/IRregister/mux1_2.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module mux1_2
+
+Top level modules:
+	mux1_2
+
+} {} {}} H:/BAME2044ASICFPGA/IRregister/register8bit.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/IRregister/register8bit.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module register8bit
+
+Top level modules:
+	register8bit
+
+} {} {}} H:/BAME2044ASICFPGA/IRregister/IRregiester.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/IRregister/IRregiester.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module IRregiester
+
+Top level modules:
+	IRregiester
+
+} {} {}} H:/BAME2044ASICFPGA/IRregister/IRregTB.v {1 {vlog -work work -nocovercells H:/BAME2044ASICFPGA/IRregister/IRregTB.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module IRregTB
+
+Top level modules:
+	IRregTB
+
+} {} {}}

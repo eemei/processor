@@ -1,0 +1,19 @@
+module counter(Q,D);
+
+
+  output reg [4:0] Q;
+	input [4:0] D;
+  //input clk;
+ // input rst_n;
+
+  // Set the initial value
+  //initial
+    //count = 0;
+
+  // Increment count 
+  asign Q = D;
+  always @(Q)begin
+      Q = Q + 1;
+   end 
+
+endmodule

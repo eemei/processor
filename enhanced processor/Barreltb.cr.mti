@@ -1,0 +1,20 @@
+{C:/altera/91/modelsim_ase/examples/enhanced processor/barrel_me.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/barrel_me.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module barrel_me
+
+Top level modules:
+	barrel_me
+
+} {} {}} C:/altera/91/modelsim_ase/examples/BarrelTB/barrel2.v {1 {vlog -work work -nocovercells C:/altera/91/modelsim_ase/examples/BarrelTB/barrel2.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module barrel2
+
+Top level modules:
+	barrel2
+
+} {} {}} {C:/altera/91/modelsim_ase/examples/enhanced processor/BarrelTB.v} {0 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/BarrelTB.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module BarrelTB
+** Error: C:/altera/91/modelsim_ase/examples/enhanced processor/BarrelTB.v(34): Number of actuals and formals does not match in task call.
+
+} {4.0 5.0} {}}

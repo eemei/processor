@@ -1,0 +1,15 @@
+{C:/altera/91/modelsim_ase/examples/enhanced processor/CU.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/CU.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module CU
+
+Top level modules:
+	CU
+
+} {} {}} {C:/altera/91/modelsim_ase/examples/enhanced processor/CUtb.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/CUtb.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module CUtb
+
+Top level modules:
+	CUtb
+
+} {} {}}

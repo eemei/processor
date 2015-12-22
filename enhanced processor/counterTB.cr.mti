@@ -1,0 +1,22 @@
+{C:/altera/91/modelsim_ase/examples/enhanced processor/counter5bit/counter.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/counter5bit/counter.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} {C:/altera/91/modelsim_ase/examples/enhanced processor/counter5bit/counterTB.v} {1 {vlog -work work -nocovercells {C:/altera/91/modelsim_ase/examples/enhanced processor/counter5bit/counterTB.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module counterTB
+
+Top level modules:
+	counterTB
+
+} {} {}} {C:/Users/lenovo/Desktop/BAME2044ASICFPGA/practical 1/counter.v} {1 {vlog -work work -nocovercells {C:/Users/lenovo/Desktop/BAME2044ASICFPGA/practical 1/counter.v}
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}}
