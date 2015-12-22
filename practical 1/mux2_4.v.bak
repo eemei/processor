@@ -1,0 +1,3 @@
+module mux2_4 (sel, a, b, c, d, Q);
+
+endmodule 

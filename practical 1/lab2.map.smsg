@@ -1,0 +1,6 @@
+Info (10281): Verilog HDL Declaration information at CU.v(5): object "Sub" differs only in case from object "sub" in the same scope
+Info (10281): Verilog HDL Declaration information at CU.v(6): object "Halt" differs only in case from object "halt" in the same scope
+Info (10281): Verilog HDL Declaration information at DP.v(5): object "JMPmux" differs only in case from object "JMPMux" in the same scope
+Warning (10273): Verilog HDL warning at Aregister.v(13): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at IRregiester.v(5): object "JMPmux" differs only in case from object "JMPMux" in the same scope
+Warning (10268): Verilog HDL information at storeRAM.v(10): always construct contains both blocking and non-blocking assignments

@@ -1,0 +1,835 @@
+Classic Timing Analyzer report for lab2
+Tue Dec 15 16:16:42 2015
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'Clock'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                              ;
++------------------------------+-------+---------------+----------------------------------+------------------+------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From             ; To               ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------+------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 10.278 ns                        ; addr[3]          ; AddrStore[10][6] ; --         ; Clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.180 ns                         ; data_Out[1]~reg0 ; data_Out[1]      ; Clock      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.590 ns                        ; data_IN[4]       ; AddrStore[13][4] ; --         ; Clock    ; 0            ;
+; Clock Setup: 'Clock'         ; N/A   ; None          ; 180.15 MHz ( period = 5.551 ns ) ; AddrStore[7][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                  ;                  ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------+------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Clock'                                                                                                                                                                                                                            ;
++-----------------------------------------+-----------------------------------------------------+------------------+------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From             ; To               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------+------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 180.15 MHz ( period = 5.551 ns )                    ; AddrStore[7][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 5.317 ns                ;
+; N/A                                     ; 187.76 MHz ( period = 5.326 ns )                    ; AddrStore[20][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 5.090 ns                ;
+; N/A                                     ; 188.43 MHz ( period = 5.307 ns )                    ; AddrStore[23][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 5.083 ns                ;
+; N/A                                     ; 189.75 MHz ( period = 5.270 ns )                    ; AddrStore[12][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 5.029 ns                ;
+; N/A                                     ; 192.72 MHz ( period = 5.189 ns )                    ; AddrStore[4][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.948 ns                ;
+; N/A                                     ; 193.16 MHz ( period = 5.177 ns )                    ; AddrStore[20][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.936 ns                ;
+; N/A                                     ; 199.12 MHz ( period = 5.022 ns )                    ; AddrStore[11][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 200.32 MHz ( period = 4.992 ns )                    ; AddrStore[2][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.770 ns                ;
+; N/A                                     ; 203.54 MHz ( period = 4.913 ns )                    ; AddrStore[16][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.676 ns                ;
+; N/A                                     ; 203.75 MHz ( period = 4.908 ns )                    ; AddrStore[28][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.686 ns                ;
+; N/A                                     ; 205.85 MHz ( period = 4.858 ns )                    ; AddrStore[14][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.622 ns                ;
+; N/A                                     ; 206.87 MHz ( period = 4.834 ns )                    ; AddrStore[28][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.607 ns                ;
+; N/A                                     ; 207.34 MHz ( period = 4.823 ns )                    ; AddrStore[18][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.582 ns                ;
+; N/A                                     ; 207.56 MHz ( period = 4.818 ns )                    ; AddrStore[4][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.563 ns                ;
+; N/A                                     ; 208.94 MHz ( period = 4.786 ns )                    ; AddrStore[26][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.534 ns                ;
+; N/A                                     ; 209.78 MHz ( period = 4.767 ns )                    ; AddrStore[10][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.537 ns                ;
+; N/A                                     ; 209.91 MHz ( period = 4.764 ns )                    ; AddrStore[10][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.529 ns                ;
+; N/A                                     ; 209.91 MHz ( period = 4.764 ns )                    ; AddrStore[13][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.516 ns                ;
+; N/A                                     ; 209.95 MHz ( period = 4.763 ns )                    ; AddrStore[13][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.529 ns                ;
+; N/A                                     ; 211.15 MHz ( period = 4.736 ns )                    ; AddrStore[12][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.481 ns                ;
+; N/A                                     ; 211.24 MHz ( period = 4.734 ns )                    ; AddrStore[29][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.496 ns                ;
+; N/A                                     ; 211.42 MHz ( period = 4.730 ns )                    ; AddrStore[15][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 211.55 MHz ( period = 4.727 ns )                    ; AddrStore[9][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.480 ns                ;
+; N/A                                     ; 211.73 MHz ( period = 4.723 ns )                    ; AddrStore[29][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.471 ns                ;
+; N/A                                     ; 212.18 MHz ( period = 4.713 ns )                    ; AddrStore[13][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.465 ns                ;
+; N/A                                     ; 213.22 MHz ( period = 4.690 ns )                    ; AddrStore[22][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.450 ns                ;
+; N/A                                     ; 213.22 MHz ( period = 4.690 ns )                    ; AddrStore[12][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.435 ns                ;
+; N/A                                     ; 213.31 MHz ( period = 4.688 ns )                    ; AddrStore[19][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 213.63 MHz ( period = 4.681 ns )                    ; AddrStore[13][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.452 ns                ;
+; N/A                                     ; 213.90 MHz ( period = 4.675 ns )                    ; AddrStore[27][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.446 ns                ;
+; N/A                                     ; 214.45 MHz ( period = 4.663 ns )                    ; AddrStore[29][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.411 ns                ;
+; N/A                                     ; 214.68 MHz ( period = 4.658 ns )                    ; AddrStore[26][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.420 ns                ;
+; N/A                                     ; 216.17 MHz ( period = 4.626 ns )                    ; AddrStore[2][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.385 ns                ;
+; N/A                                     ; 217.20 MHz ( period = 4.604 ns )                    ; AddrStore[25][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.367 ns                ;
+; N/A                                     ; 218.05 MHz ( period = 4.586 ns )                    ; AddrStore[15][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.337 ns                ;
+; N/A                                     ; 218.67 MHz ( period = 4.573 ns )                    ; AddrStore[5][3]  ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.341 ns                ;
+; N/A                                     ; 219.88 MHz ( period = 4.548 ns )                    ; AddrStore[1][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.301 ns                ;
+; N/A                                     ; 220.07 MHz ( period = 4.544 ns )                    ; AddrStore[11][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.305 ns                ;
+; N/A                                     ; 220.17 MHz ( period = 4.542 ns )                    ; AddrStore[3][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.308 ns                ;
+; N/A                                     ; 220.60 MHz ( period = 4.533 ns )                    ; AddrStore[18][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.292 ns                ;
+; N/A                                     ; 220.70 MHz ( period = 4.531 ns )                    ; AddrStore[8][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.295 ns                ;
+; N/A                                     ; 221.53 MHz ( period = 4.514 ns )                    ; AddrStore[5][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.282 ns                ;
+; N/A                                     ; 221.63 MHz ( period = 4.512 ns )                    ; AddrStore[6][1]  ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.272 ns                ;
+; N/A                                     ; 222.97 MHz ( period = 4.485 ns )                    ; AddrStore[11][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.236 ns                ;
+; N/A                                     ; 224.37 MHz ( period = 4.457 ns )                    ; AddrStore[15][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.208 ns                ;
+; N/A                                     ; 224.47 MHz ( period = 4.455 ns )                    ; AddrStore[15][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.206 ns                ;
+; N/A                                     ; 224.47 MHz ( period = 4.455 ns )                    ; AddrStore[26][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.203 ns                ;
+; N/A                                     ; 224.82 MHz ( period = 4.448 ns )                    ; AddrStore[14][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.198 ns                ;
+; N/A                                     ; 225.48 MHz ( period = 4.435 ns )                    ; AddrStore[16][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.193 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; AddrStore[17][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.191 ns                ;
+; N/A                                     ; 226.09 MHz ( period = 4.423 ns )                    ; AddrStore[0][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.188 ns                ;
+; N/A                                     ; 226.50 MHz ( period = 4.415 ns )                    ; AddrStore[8][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.184 ns                ;
+; N/A                                     ; 226.96 MHz ( period = 4.406 ns )                    ; AddrStore[8][3]  ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.170 ns                ;
+; N/A                                     ; 227.63 MHz ( period = 4.393 ns )                    ; AddrStore[9][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.165 ns                ;
+; N/A                                     ; 228.10 MHz ( period = 4.384 ns )                    ; AddrStore[2][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.143 ns                ;
+; N/A                                     ; 229.46 MHz ( period = 4.358 ns )                    ; AddrStore[9][3]  ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.125 ns                ;
+; N/A                                     ; 230.26 MHz ( period = 4.343 ns )                    ; AddrStore[31][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.114 ns                ;
+; N/A                                     ; 232.02 MHz ( period = 4.310 ns )                    ; AddrStore[21][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.078 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; AddrStore[22][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.071 ns                ;
+; N/A                                     ; 232.56 MHz ( period = 4.300 ns )                    ; AddrStore[27][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.062 ns                ;
+; N/A                                     ; 233.32 MHz ( period = 4.286 ns )                    ; AddrStore[15][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.051 ns                ;
+; N/A                                     ; 233.48 MHz ( period = 4.283 ns )                    ; AddrStore[2][1]  ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.043 ns                ;
+; N/A                                     ; 233.59 MHz ( period = 4.281 ns )                    ; AddrStore[3][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.81 MHz ( period = 4.277 ns )                    ; AddrStore[30][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.055 ns                ;
+; N/A                                     ; 234.58 MHz ( period = 4.263 ns )                    ; AddrStore[13][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.030 ns                ;
+; N/A                                     ; 235.02 MHz ( period = 4.255 ns )                    ; AddrStore[29][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.017 ns                ;
+; N/A                                     ; 235.02 MHz ( period = 4.255 ns )                    ; AddrStore[11][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 4.006 ns                ;
+; N/A                                     ; 237.30 MHz ( period = 4.214 ns )                    ; AddrStore[21][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.982 ns                ;
+; N/A                                     ; 237.87 MHz ( period = 4.204 ns )                    ; AddrStore[6][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.949 ns                ;
+; N/A                                     ; 237.93 MHz ( period = 4.203 ns )                    ; AddrStore[22][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.948 ns                ;
+; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; AddrStore[9][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.951 ns                ;
+; N/A                                     ; 238.38 MHz ( period = 4.195 ns )                    ; AddrStore[14][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.964 ns                ;
+; N/A                                     ; 238.44 MHz ( period = 4.194 ns )                    ; AddrStore[15][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.955 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; AddrStore[13][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.941 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; AddrStore[11][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.83 MHz ( period = 4.187 ns )                    ; AddrStore[26][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.935 ns                ;
+; N/A                                     ; 239.58 MHz ( period = 4.174 ns )                    ; AddrStore[5][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.943 ns                ;
+; N/A                                     ; 239.64 MHz ( period = 4.173 ns )                    ; AddrStore[24][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.936 ns                ;
+; N/A                                     ; 239.98 MHz ( period = 4.167 ns )                    ; AddrStore[2][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.21 MHz ( period = 4.163 ns )                    ; AddrStore[9][1]  ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.21 MHz ( period = 4.163 ns )                    ; AddrStore[31][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.915 ns                ;
+; N/A                                     ; 242.01 MHz ( period = 4.132 ns )                    ; AddrStore[18][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.891 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; AddrStore[10][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.891 ns                ;
+; N/A                                     ; 242.72 MHz ( period = 4.120 ns )                    ; AddrStore[24][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.878 ns                ;
+; N/A                                     ; 243.25 MHz ( period = 4.111 ns )                    ; AddrStore[21][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.880 ns                ;
+; N/A                                     ; 244.26 MHz ( period = 4.094 ns )                    ; AddrStore[29][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.857 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; AddrStore[16][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.837 ns                ;
+; N/A                                     ; 244.44 MHz ( period = 4.091 ns )                    ; AddrStore[24][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.80 MHz ( period = 4.085 ns )                    ; AddrStore[14][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 245.22 MHz ( period = 4.078 ns )                    ; AddrStore[23][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.840 ns                ;
+; N/A                                     ; 245.64 MHz ( period = 4.071 ns )                    ; AddrStore[5][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.825 ns                ;
+; N/A                                     ; 245.70 MHz ( period = 4.070 ns )                    ; AddrStore[8][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.835 ns                ;
+; N/A                                     ; 245.82 MHz ( period = 4.068 ns )                    ; AddrStore[17][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.821 ns                ;
+; N/A                                     ; 245.88 MHz ( period = 4.067 ns )                    ; AddrStore[24][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.821 ns                ;
+; N/A                                     ; 246.61 MHz ( period = 4.055 ns )                    ; AddrStore[0][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.806 ns                ;
+; N/A                                     ; 247.04 MHz ( period = 4.048 ns )                    ; AddrStore[0][3]  ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.813 ns                ;
+; N/A                                     ; 247.52 MHz ( period = 4.040 ns )                    ; AddrStore[0][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.810 ns                ;
+; N/A                                     ; 247.65 MHz ( period = 4.038 ns )                    ; AddrStore[14][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.788 ns                ;
+; N/A                                     ; 248.02 MHz ( period = 4.032 ns )                    ; AddrStore[4][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.777 ns                ;
+; N/A                                     ; 248.39 MHz ( period = 4.026 ns )                    ; AddrStore[8][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.776 ns                ;
+; N/A                                     ; 248.69 MHz ( period = 4.021 ns )                    ; AddrStore[5][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.775 ns                ;
+; N/A                                     ; 248.76 MHz ( period = 4.020 ns )                    ; AddrStore[1][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.773 ns                ;
+; N/A                                     ; 249.31 MHz ( period = 4.011 ns )                    ; AddrStore[13][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.773 ns                ;
+; N/A                                     ; 249.63 MHz ( period = 4.006 ns )                    ; AddrStore[4][3]  ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.765 ns                ;
+; N/A                                     ; 249.63 MHz ( period = 4.006 ns )                    ; AddrStore[2][3]  ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.779 ns                ;
+; N/A                                     ; 249.88 MHz ( period = 4.002 ns )                    ; AddrStore[9][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.755 ns                ;
+; N/A                                     ; 250.25 MHz ( period = 3.996 ns )                    ; AddrStore[1][1]  ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.759 ns                ;
+; N/A                                     ; 251.51 MHz ( period = 3.976 ns )                    ; AddrStore[7][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.747 ns                ;
+; N/A                                     ; 252.59 MHz ( period = 3.959 ns )                    ; AddrStore[25][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.726 ns                ;
+; N/A                                     ; 252.97 MHz ( period = 3.953 ns )                    ; AddrStore[16][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.711 ns                ;
+; N/A                                     ; 253.04 MHz ( period = 3.952 ns )                    ; AddrStore[28][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.725 ns                ;
+; N/A                                     ; 253.55 MHz ( period = 3.944 ns )                    ; AddrStore[5][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.717 ns                ;
+; N/A                                     ; 254.19 MHz ( period = 3.934 ns )                    ; AddrStore[8][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.684 ns                ;
+; N/A                                     ; 254.71 MHz ( period = 3.926 ns )                    ; AddrStore[18][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; 255.36 MHz ( period = 3.916 ns )                    ; AddrStore[15][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.681 ns                ;
+; N/A                                     ; 256.54 MHz ( period = 3.898 ns )                    ; AddrStore[16][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.652 ns                ;
+; N/A                                     ; 256.87 MHz ( period = 3.893 ns )                    ; AddrStore[14][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.643 ns                ;
+; N/A                                     ; 257.07 MHz ( period = 3.890 ns )                    ; AddrStore[0][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.641 ns                ;
+; N/A                                     ; 257.40 MHz ( period = 3.885 ns )                    ; AddrStore[3][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.652 ns                ;
+; N/A                                     ; 257.47 MHz ( period = 3.884 ns )                    ; AddrStore[14][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.644 ns                ;
+; N/A                                     ; 257.60 MHz ( period = 3.882 ns )                    ; AddrStore[25][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.635 ns                ;
+; N/A                                     ; 257.67 MHz ( period = 3.881 ns )                    ; AddrStore[21][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.635 ns                ;
+; N/A                                     ; 257.67 MHz ( period = 3.881 ns )                    ; AddrStore[29][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.648 ns                ;
+; N/A                                     ; 257.93 MHz ( period = 3.877 ns )                    ; AddrStore[28][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.651 ns                ;
+; N/A                                     ; 258.06 MHz ( period = 3.875 ns )                    ; AddrStore[1][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.647 ns                ;
+; N/A                                     ; 258.67 MHz ( period = 3.866 ns )                    ; AddrStore[26][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.629 ns                ;
+; N/A                                     ; 259.34 MHz ( period = 3.856 ns )                    ; AddrStore[9][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.624 ns                ;
+; N/A                                     ; 261.03 MHz ( period = 3.831 ns )                    ; AddrStore[26][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.589 ns                ;
+; N/A                                     ; 261.16 MHz ( period = 3.829 ns )                    ; AddrStore[1][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.597 ns                ;
+; N/A                                     ; 261.30 MHz ( period = 3.827 ns )                    ; AddrStore[10][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.592 ns                ;
+; N/A                                     ; 262.26 MHz ( period = 3.813 ns )                    ; AddrStore[30][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.586 ns                ;
+; N/A                                     ; 264.69 MHz ( period = 3.778 ns )                    ; AddrStore[16][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.522 ns                ;
+; N/A                                     ; 264.97 MHz ( period = 3.774 ns )                    ; AddrStore[1][3]  ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.541 ns                ;
+; N/A                                     ; 265.25 MHz ( period = 3.770 ns )                    ; AddrStore[9][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.537 ns                ;
+; N/A                                     ; 265.67 MHz ( period = 3.764 ns )                    ; AddrStore[8][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 265.82 MHz ( period = 3.762 ns )                    ; AddrStore[1][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.530 ns                ;
+; N/A                                     ; 267.45 MHz ( period = 3.739 ns )                    ; AddrStore[21][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.503 ns                ;
+; N/A                                     ; 267.52 MHz ( period = 3.738 ns )                    ; AddrStore[18][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.511 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; AddrStore[24][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.492 ns                ;
+; N/A                                     ; 267.81 MHz ( period = 3.734 ns )                    ; AddrStore[31][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.500 ns                ;
+; N/A                                     ; 267.81 MHz ( period = 3.734 ns )                    ; AddrStore[22][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.493 ns                ;
+; N/A                                     ; 268.02 MHz ( period = 3.731 ns )                    ; AddrStore[27][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.483 ns                ;
+; N/A                                     ; 270.20 MHz ( period = 3.701 ns )                    ; AddrStore[7][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.453 ns                ;
+; N/A                                     ; 270.34 MHz ( period = 3.699 ns )                    ; AddrStore[31][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.451 ns                ;
+; N/A                                     ; 271.74 MHz ( period = 3.680 ns )                    ; AddrStore[24][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.439 ns                ;
+; N/A                                     ; 272.33 MHz ( period = 3.672 ns )                    ; AddrStore[25][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.439 ns                ;
+; N/A                                     ; 273.22 MHz ( period = 3.660 ns )                    ; AddrStore[0][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.426 ns                ;
+; N/A                                     ; 276.24 MHz ( period = 3.620 ns )                    ; AddrStore[2][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.384 ns                ;
+; N/A                                     ; 277.16 MHz ( period = 3.608 ns )                    ; AddrStore[21][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.362 ns                ;
+; N/A                                     ; 278.47 MHz ( period = 3.591 ns )                    ; AddrStore[17][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.358 ns                ;
+; N/A                                     ; 279.56 MHz ( period = 3.577 ns )                    ; AddrStore[10][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.338 ns                ;
+; N/A                                     ; 281.06 MHz ( period = 3.558 ns )                    ; AddrStore[27][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.310 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; AddrStore[22][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.302 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; AddrStore[21][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.311 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; AddrStore[22][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; 282.09 MHz ( period = 3.545 ns )                    ; AddrStore[7][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.297 ns                ;
+; N/A                                     ; 282.41 MHz ( period = 3.541 ns )                    ; AddrStore[13][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.307 ns                ;
+; N/A                                     ; 282.41 MHz ( period = 3.541 ns )                    ; AddrStore[3][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.293 ns                ;
+; N/A                                     ; 282.97 MHz ( period = 3.534 ns )                    ; AddrStore[22][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.289 ns                ;
+; N/A                                     ; 283.37 MHz ( period = 3.529 ns )                    ; AddrStore[0][1]  ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.290 ns                ;
+; N/A                                     ; 283.77 MHz ( period = 3.524 ns )                    ; AddrStore[18][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.302 ns                ;
+; N/A                                     ; 285.23 MHz ( period = 3.506 ns )                    ; AddrStore[3][1]  ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.268 ns                ;
+; N/A                                     ; 285.47 MHz ( period = 3.503 ns )                    ; AddrStore[25][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.256 ns                ;
+; N/A                                     ; 285.80 MHz ( period = 3.499 ns )                    ; AddrStore[16][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.258 ns                ;
+; N/A                                     ; 286.12 MHz ( period = 3.495 ns )                    ; AddrStore[5][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.249 ns                ;
+; N/A                                     ; 286.45 MHz ( period = 3.491 ns )                    ; AddrStore[24][5] ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 287.03 MHz ( period = 3.484 ns )                    ; AddrStore[17][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.237 ns                ;
+; N/A                                     ; 287.27 MHz ( period = 3.481 ns )                    ; AddrStore[1][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.234 ns                ;
+; N/A                                     ; 288.18 MHz ( period = 3.470 ns )                    ; AddrStore[4][1]  ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.225 ns                ;
+; N/A                                     ; 290.61 MHz ( period = 3.441 ns )                    ; AddrStore[7][3]  ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.207 ns                ;
+; N/A                                     ; 291.21 MHz ( period = 3.434 ns )                    ; AddrStore[0][4]  ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.185 ns                ;
+; N/A                                     ; 291.55 MHz ( period = 3.430 ns )                    ; AddrStore[6][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.195 ns                ;
+; N/A                                     ; 291.55 MHz ( period = 3.430 ns )                    ; AddrStore[6][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 293.00 MHz ( period = 3.413 ns )                    ; AddrStore[15][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 293.17 MHz ( period = 3.411 ns )                    ; AddrStore[7][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.163 ns                ;
+; N/A                                     ; 293.86 MHz ( period = 3.403 ns )                    ; AddrStore[3][7]  ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.155 ns                ;
+; N/A                                     ; 294.38 MHz ( period = 3.397 ns )                    ; AddrStore[11][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.162 ns                ;
+; N/A                                     ; 294.55 MHz ( period = 3.395 ns )                    ; AddrStore[17][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.163 ns                ;
+; N/A                                     ; 294.99 MHz ( period = 3.390 ns )                    ; AddrStore[20][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.135 ns                ;
+; N/A                                     ; 295.16 MHz ( period = 3.388 ns )                    ; AddrStore[17][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.160 ns                ;
+; N/A                                     ; 295.86 MHz ( period = 3.380 ns )                    ; AddrStore[4][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.140 ns                ;
+; N/A                                     ; 296.56 MHz ( period = 3.372 ns )                    ; AddrStore[2][0]  ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.137 ns                ;
+; N/A                                     ; 296.91 MHz ( period = 3.368 ns )                    ; AddrStore[23][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.140 ns                ;
+; N/A                                     ; 297.18 MHz ( period = 3.365 ns )                    ; AddrStore[20][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.120 ns                ;
+; N/A                                     ; 300.12 MHz ( period = 3.332 ns )                    ; AddrStore[25][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 300.66 MHz ( period = 3.326 ns )                    ; AddrStore[17][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.097 ns                ;
+; N/A                                     ; 300.66 MHz ( period = 3.326 ns )                    ; AddrStore[12][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.071 ns                ;
+; N/A                                     ; 300.84 MHz ( period = 3.324 ns )                    ; AddrStore[16][4] ; data_Out[4]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.068 ns                ;
+; N/A                                     ; 301.11 MHz ( period = 3.321 ns )                    ; AddrStore[18][3] ; data_Out[3]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.094 ns                ;
+; N/A                                     ; 305.62 MHz ( period = 3.272 ns )                    ; AddrStore[19][1] ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.044 ns                ;
+; N/A                                     ; 307.88 MHz ( period = 3.248 ns )                    ; AddrStore[6][6]  ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.012 ns                ;
+; N/A                                     ; 309.41 MHz ( period = 3.232 ns )                    ; AddrStore[19][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 3.013 ns                ;
+; N/A                                     ; 313.68 MHz ( period = 3.188 ns )                    ; AddrStore[19][0] ; data_Out[0]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 318.57 MHz ( period = 3.139 ns )                    ; AddrStore[21][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 2.912 ns                ;
+; N/A                                     ; 320.72 MHz ( period = 3.118 ns )                    ; AddrStore[12][6] ; data_Out[6]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 2.882 ns                ;
+; N/A                                     ; 322.27 MHz ( period = 3.103 ns )                    ; AddrStore[6][2]  ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 2.867 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; AddrStore[20][7] ; data_Out[7]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 2.814 ns                ;
+; N/A                                     ; 328.52 MHz ( period = 3.044 ns )                    ; AddrStore[7][1]  ; data_Out[1]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 2.806 ns                ;
+; N/A                                     ; 329.49 MHz ( period = 3.035 ns )                    ; AddrStore[3][5]  ; data_Out[5]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 2.787 ns                ;
+; N/A                                     ; 331.24 MHz ( period = 3.019 ns )                    ; AddrStore[11][2] ; data_Out[2]~reg0 ; Clock      ; Clock    ; None                        ; None                      ; 2.787 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                  ;                  ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------+------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+------------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From    ; To               ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+------------------+----------+
+; N/A                                     ; None                                                ; 10.278 ns  ; addr[3] ; AddrStore[10][0] ; Clock    ;
+; N/A                                     ; None                                                ; 10.278 ns  ; addr[3] ; AddrStore[10][1] ; Clock    ;
+; N/A                                     ; None                                                ; 10.278 ns  ; addr[3] ; AddrStore[10][2] ; Clock    ;
+; N/A                                     ; None                                                ; 10.278 ns  ; addr[3] ; AddrStore[10][3] ; Clock    ;
+; N/A                                     ; None                                                ; 10.278 ns  ; addr[3] ; AddrStore[10][4] ; Clock    ;
+; N/A                                     ; None                                                ; 10.278 ns  ; addr[3] ; AddrStore[10][6] ; Clock    ;
+; N/A                                     ; None                                                ; 9.855 ns   ; addr[1] ; data_Out[2]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 9.724 ns   ; addr[2] ; AddrStore[17][7] ; Clock    ;
+; N/A                                     ; None                                                ; 9.677 ns   ; addr[3] ; AddrStore[10][5] ; Clock    ;
+; N/A                                     ; None                                                ; 9.677 ns   ; addr[3] ; AddrStore[10][7] ; Clock    ;
+; N/A                                     ; None                                                ; 9.595 ns   ; addr[2] ; AddrStore[10][0] ; Clock    ;
+; N/A                                     ; None                                                ; 9.595 ns   ; addr[2] ; AddrStore[10][1] ; Clock    ;
+; N/A                                     ; None                                                ; 9.595 ns   ; addr[2] ; AddrStore[10][2] ; Clock    ;
+; N/A                                     ; None                                                ; 9.595 ns   ; addr[2] ; AddrStore[10][3] ; Clock    ;
+; N/A                                     ; None                                                ; 9.595 ns   ; addr[2] ; AddrStore[10][4] ; Clock    ;
+; N/A                                     ; None                                                ; 9.595 ns   ; addr[2] ; AddrStore[10][6] ; Clock    ;
+; N/A                                     ; None                                                ; 9.578 ns   ; addr[3] ; AddrStore[6][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.578 ns   ; addr[3] ; AddrStore[6][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.578 ns   ; addr[3] ; AddrStore[6][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.568 ns   ; addr[1] ; AddrStore[17][7] ; Clock    ;
+; N/A                                     ; None                                                ; 9.546 ns   ; addr[2] ; data_Out[6]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 9.372 ns   ; addr[3] ; AddrStore[9][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.372 ns   ; addr[3] ; AddrStore[9][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.372 ns   ; addr[3] ; AddrStore[9][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.372 ns   ; addr[3] ; AddrStore[9][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.372 ns   ; addr[3] ; AddrStore[9][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.372 ns   ; addr[3] ; AddrStore[9][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.372 ns   ; addr[3] ; AddrStore[9][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.372 ns   ; addr[3] ; AddrStore[9][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.267 ns   ; addr[2] ; data_Out[2]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 9.228 ns   ; addr[3] ; AddrStore[11][0] ; Clock    ;
+; N/A                                     ; None                                                ; 9.228 ns   ; addr[3] ; AddrStore[11][1] ; Clock    ;
+; N/A                                     ; None                                                ; 9.228 ns   ; addr[3] ; AddrStore[11][3] ; Clock    ;
+; N/A                                     ; None                                                ; 9.228 ns   ; addr[3] ; AddrStore[11][4] ; Clock    ;
+; N/A                                     ; None                                                ; 9.228 ns   ; addr[3] ; AddrStore[11][5] ; Clock    ;
+; N/A                                     ; None                                                ; 9.228 ns   ; addr[3] ; AddrStore[11][6] ; Clock    ;
+; N/A                                     ; None                                                ; 9.228 ns   ; addr[3] ; AddrStore[11][7] ; Clock    ;
+; N/A                                     ; None                                                ; 9.205 ns   ; addr[1] ; data_Out[3]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 9.186 ns   ; addr[2] ; data_Out[3]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 9.183 ns   ; addr[1] ; data_Out[6]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 9.104 ns   ; addr[0] ; AddrStore[17][7] ; Clock    ;
+; N/A                                     ; None                                                ; 9.099 ns   ; addr[0] ; AddrStore[10][0] ; Clock    ;
+; N/A                                     ; None                                                ; 9.099 ns   ; addr[0] ; AddrStore[10][1] ; Clock    ;
+; N/A                                     ; None                                                ; 9.099 ns   ; addr[0] ; AddrStore[10][2] ; Clock    ;
+; N/A                                     ; None                                                ; 9.099 ns   ; addr[0] ; AddrStore[10][3] ; Clock    ;
+; N/A                                     ; None                                                ; 9.099 ns   ; addr[0] ; AddrStore[10][4] ; Clock    ;
+; N/A                                     ; None                                                ; 9.099 ns   ; addr[0] ; AddrStore[10][6] ; Clock    ;
+; N/A                                     ; None                                                ; 9.094 ns   ; addr[2] ; data_Out[1]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 9.048 ns   ; addr[2] ; AddrStore[1][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.048 ns   ; addr[2] ; AddrStore[1][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.048 ns   ; addr[2] ; AddrStore[1][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.048 ns   ; addr[2] ; AddrStore[1][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.048 ns   ; addr[2] ; AddrStore[1][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.048 ns   ; addr[2] ; AddrStore[1][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.048 ns   ; addr[2] ; AddrStore[1][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.033 ns   ; addr[1] ; AddrStore[10][0] ; Clock    ;
+; N/A                                     ; None                                                ; 9.033 ns   ; addr[1] ; AddrStore[10][1] ; Clock    ;
+; N/A                                     ; None                                                ; 9.033 ns   ; addr[1] ; AddrStore[10][2] ; Clock    ;
+; N/A                                     ; None                                                ; 9.033 ns   ; addr[1] ; AddrStore[10][3] ; Clock    ;
+; N/A                                     ; None                                                ; 9.033 ns   ; addr[1] ; AddrStore[10][4] ; Clock    ;
+; N/A                                     ; None                                                ; 9.033 ns   ; addr[1] ; AddrStore[10][6] ; Clock    ;
+; N/A                                     ; None                                                ; 9.019 ns   ; addr[3] ; data_Out[2]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 9.013 ns   ; addr[2] ; AddrStore[6][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.013 ns   ; addr[2] ; AddrStore[6][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 9.013 ns   ; addr[2] ; AddrStore[6][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.994 ns   ; addr[2] ; AddrStore[10][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.994 ns   ; addr[2] ; AddrStore[10][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.944 ns   ; addr[1] ; data_Out[4]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.936 ns   ; addr[3] ; AddrStore[27][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.933 ns   ; addr[3] ; AddrStore[15][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.933 ns   ; addr[3] ; AddrStore[15][1] ; Clock    ;
+; N/A                                     ; None                                                ; 8.933 ns   ; addr[3] ; AddrStore[15][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.933 ns   ; addr[3] ; AddrStore[15][3] ; Clock    ;
+; N/A                                     ; None                                                ; 8.933 ns   ; addr[3] ; AddrStore[15][4] ; Clock    ;
+; N/A                                     ; None                                                ; 8.933 ns   ; addr[3] ; AddrStore[15][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.933 ns   ; addr[3] ; AddrStore[15][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.933 ns   ; addr[3] ; AddrStore[15][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.932 ns   ; addr[3] ; AddrStore[17][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.916 ns   ; addr[3] ; data_Out[3]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.904 ns   ; addr[2] ; data_Out[7]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.896 ns   ; addr[3] ; AddrStore[6][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.896 ns   ; addr[3] ; AddrStore[6][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.896 ns   ; addr[3] ; AddrStore[6][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.896 ns   ; addr[3] ; AddrStore[6][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.896 ns   ; addr[3] ; AddrStore[6][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.892 ns   ; addr[1] ; AddrStore[1][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.892 ns   ; addr[1] ; AddrStore[1][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.892 ns   ; addr[1] ; AddrStore[1][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.892 ns   ; addr[1] ; AddrStore[1][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.892 ns   ; addr[1] ; AddrStore[1][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.892 ns   ; addr[1] ; AddrStore[1][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.892 ns   ; addr[1] ; AddrStore[1][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.889 ns   ; addr[3] ; AddrStore[27][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.889 ns   ; addr[3] ; AddrStore[27][1] ; Clock    ;
+; N/A                                     ; None                                                ; 8.889 ns   ; addr[3] ; AddrStore[27][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.889 ns   ; addr[3] ; AddrStore[27][3] ; Clock    ;
+; N/A                                     ; None                                                ; 8.889 ns   ; addr[3] ; AddrStore[27][4] ; Clock    ;
+; N/A                                     ; None                                                ; 8.889 ns   ; addr[3] ; AddrStore[27][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.889 ns   ; addr[3] ; AddrStore[27][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.867 ns   ; addr[2] ; AddrStore[5][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.837 ns   ; addr[3] ; data_Out[1]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.831 ns   ; addr[2] ; AddrStore[7][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.831 ns   ; addr[2] ; AddrStore[7][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.831 ns   ; addr[2] ; AddrStore[7][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.831 ns   ; addr[2] ; AddrStore[7][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.831 ns   ; addr[2] ; AddrStore[7][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.831 ns   ; addr[2] ; AddrStore[7][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.831 ns   ; addr[2] ; AddrStore[7][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.812 ns   ; addr[3] ; AddrStore[22][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.812 ns   ; addr[3] ; AddrStore[22][1] ; Clock    ;
+; N/A                                     ; None                                                ; 8.812 ns   ; addr[3] ; AddrStore[22][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.812 ns   ; addr[3] ; AddrStore[22][3] ; Clock    ;
+; N/A                                     ; None                                                ; 8.812 ns   ; addr[3] ; AddrStore[22][4] ; Clock    ;
+; N/A                                     ; None                                                ; 8.812 ns   ; addr[3] ; AddrStore[22][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.812 ns   ; addr[3] ; AddrStore[22][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.812 ns   ; addr[3] ; AddrStore[22][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.790 ns   ; addr[3] ; data_Out[6]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.776 ns   ; addr[3] ; AddrStore[13][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.776 ns   ; addr[3] ; AddrStore[13][1] ; Clock    ;
+; N/A                                     ; None                                                ; 8.776 ns   ; addr[3] ; AddrStore[13][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.776 ns   ; addr[3] ; AddrStore[13][3] ; Clock    ;
+; N/A                                     ; None                                                ; 8.776 ns   ; addr[3] ; AddrStore[13][4] ; Clock    ;
+; N/A                                     ; None                                                ; 8.776 ns   ; addr[3] ; AddrStore[13][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.776 ns   ; addr[3] ; AddrStore[13][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.776 ns   ; addr[3] ; AddrStore[13][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.739 ns   ; addr[2] ; data_Out[5]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.738 ns   ; addr[4] ; data_Out[5]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.717 ns   ; addr[2] ; AddrStore[17][3] ; Clock    ;
+; N/A                                     ; None                                                ; 8.704 ns   ; addr[1] ; data_Out[0]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.698 ns   ; addr[2] ; AddrStore[17][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.698 ns   ; addr[2] ; AddrStore[17][1] ; Clock    ;
+; N/A                                     ; None                                                ; 8.698 ns   ; addr[2] ; AddrStore[17][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.698 ns   ; addr[2] ; AddrStore[17][4] ; Clock    ;
+; N/A                                     ; None                                                ; 8.698 ns   ; addr[2] ; AddrStore[17][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.698 ns   ; addr[2] ; AddrStore[17][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.684 ns   ; addr[2] ; data_Out[0]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.684 ns   ; addr[3] ; data_Out[0]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.677 ns   ; addr[3] ; AddrStore[4][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.677 ns   ; addr[3] ; AddrStore[4][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.677 ns   ; addr[3] ; AddrStore[4][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.677 ns   ; addr[3] ; AddrStore[4][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.677 ns   ; addr[3] ; AddrStore[4][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.677 ns   ; addr[3] ; AddrStore[4][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.677 ns   ; addr[3] ; AddrStore[4][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.677 ns   ; addr[3] ; AddrStore[4][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.658 ns   ; addr[2] ; AddrStore[9][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.658 ns   ; addr[2] ; AddrStore[9][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.658 ns   ; addr[2] ; AddrStore[9][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.658 ns   ; addr[2] ; AddrStore[9][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.658 ns   ; addr[2] ; AddrStore[9][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.658 ns   ; addr[2] ; AddrStore[9][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.658 ns   ; addr[2] ; AddrStore[9][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.658 ns   ; addr[2] ; AddrStore[9][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.639 ns   ; addr[3] ; AddrStore[26][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.639 ns   ; addr[3] ; AddrStore[26][1] ; Clock    ;
+; N/A                                     ; None                                                ; 8.639 ns   ; addr[3] ; AddrStore[26][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.639 ns   ; addr[3] ; AddrStore[26][3] ; Clock    ;
+; N/A                                     ; None                                                ; 8.639 ns   ; addr[3] ; AddrStore[26][4] ; Clock    ;
+; N/A                                     ; None                                                ; 8.639 ns   ; addr[3] ; AddrStore[26][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.639 ns   ; addr[3] ; AddrStore[26][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.639 ns   ; addr[3] ; AddrStore[26][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.631 ns   ; addr[1] ; data_Out[7]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.622 ns   ; addr[3] ; data_Out[5]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.621 ns   ; addr[3] ; AddrStore[20][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.621 ns   ; addr[3] ; AddrStore[20][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.621 ns   ; addr[3] ; AddrStore[20][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.621 ns   ; addr[3] ; AddrStore[20][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.621 ns   ; addr[1] ; AddrStore[5][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.618 ns   ; addr[1] ; AddrStore[7][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.618 ns   ; addr[1] ; AddrStore[7][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.618 ns   ; addr[1] ; AddrStore[7][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.618 ns   ; addr[1] ; AddrStore[7][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.618 ns   ; addr[1] ; AddrStore[7][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.618 ns   ; addr[1] ; AddrStore[7][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.618 ns   ; addr[1] ; AddrStore[7][7]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.603 ns   ; addr[3] ; AddrStore[18][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.603 ns   ; addr[3] ; AddrStore[18][1] ; Clock    ;
+; N/A                                     ; None                                                ; 8.603 ns   ; addr[3] ; AddrStore[18][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.603 ns   ; addr[3] ; AddrStore[18][3] ; Clock    ;
+; N/A                                     ; None                                                ; 8.603 ns   ; addr[3] ; AddrStore[18][4] ; Clock    ;
+; N/A                                     ; None                                                ; 8.603 ns   ; addr[3] ; AddrStore[18][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.603 ns   ; addr[3] ; AddrStore[18][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.603 ns   ; addr[3] ; AddrStore[18][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.592 ns   ; addr[3] ; AddrStore[31][0] ; Clock    ;
+; N/A                                     ; None                                                ; 8.592 ns   ; addr[3] ; AddrStore[31][1] ; Clock    ;
+; N/A                                     ; None                                                ; 8.592 ns   ; addr[3] ; AddrStore[31][2] ; Clock    ;
+; N/A                                     ; None                                                ; 8.592 ns   ; addr[3] ; AddrStore[31][3] ; Clock    ;
+; N/A                                     ; None                                                ; 8.592 ns   ; addr[3] ; AddrStore[31][4] ; Clock    ;
+; N/A                                     ; None                                                ; 8.592 ns   ; addr[3] ; AddrStore[31][5] ; Clock    ;
+; N/A                                     ; None                                                ; 8.592 ns   ; addr[3] ; AddrStore[31][6] ; Clock    ;
+; N/A                                     ; None                                                ; 8.592 ns   ; addr[3] ; AddrStore[31][7] ; Clock    ;
+; N/A                                     ; None                                                ; 8.576 ns   ; addr[3] ; data_Out[7]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; 8.570 ns   ; addr[2] ; AddrStore[0][0]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.570 ns   ; addr[2] ; AddrStore[0][1]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.570 ns   ; addr[2] ; AddrStore[0][2]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.570 ns   ; addr[2] ; AddrStore[0][3]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.570 ns   ; addr[2] ; AddrStore[0][4]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.570 ns   ; addr[2] ; AddrStore[0][5]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.570 ns   ; addr[2] ; AddrStore[0][6]  ; Clock    ;
+; N/A                                     ; None                                                ; 8.570 ns   ; addr[2] ; AddrStore[0][7]  ; Clock    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;         ;                  ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+------------------+----------+
+
+
++---------------------------------------------------------------------------------+
+; tco                                                                             ;
++-------+--------------+------------+------------------+-------------+------------+
+; Slack ; Required tco ; Actual tco ; From             ; To          ; From Clock ;
++-------+--------------+------------+------------------+-------------+------------+
+; N/A   ; None         ; 9.180 ns   ; data_Out[1]~reg0 ; data_Out[1] ; Clock      ;
+; N/A   ; None         ; 8.935 ns   ; data_Out[3]~reg0 ; data_Out[3] ; Clock      ;
+; N/A   ; None         ; 8.754 ns   ; data_Out[7]~reg0 ; data_Out[7] ; Clock      ;
+; N/A   ; None         ; 8.279 ns   ; data_Out[5]~reg0 ; data_Out[5] ; Clock      ;
+; N/A   ; None         ; 7.906 ns   ; data_Out[4]~reg0 ; data_Out[4] ; Clock      ;
+; N/A   ; None         ; 7.519 ns   ; data_Out[2]~reg0 ; data_Out[2] ; Clock      ;
+; N/A   ; None         ; 7.245 ns   ; data_Out[6]~reg0 ; data_Out[6] ; Clock      ;
+; N/A   ; None         ; 7.207 ns   ; data_Out[0]~reg0 ; data_Out[0] ; Clock      ;
++-------+--------------+------------+------------------+-------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                   ;
++-----------------------------------------+-----------------------------------------------------+-----------+------------+------------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From       ; To               ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+------------+------------------+----------+
+; N/A                                     ; None                                                ; -3.590 ns ; data_IN[4] ; AddrStore[13][4] ; Clock    ;
+; N/A                                     ; None                                                ; -3.647 ns ; data_IN[3] ; AddrStore[15][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.678 ns ; data_IN[3] ; AddrStore[13][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.703 ns ; data_IN[3] ; AddrStore[28][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.721 ns ; data_IN[4] ; AddrStore[24][4] ; Clock    ;
+; N/A                                     ; None                                                ; -3.744 ns ; data_IN[6] ; AddrStore[28][6] ; Clock    ;
+; N/A                                     ; None                                                ; -3.781 ns ; data_IN[6] ; AddrStore[31][6] ; Clock    ;
+; N/A                                     ; None                                                ; -3.784 ns ; data_IN[6] ; AddrStore[27][6] ; Clock    ;
+; N/A                                     ; None                                                ; -3.793 ns ; data_IN[3] ; AddrStore[21][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.825 ns ; data_IN[6] ; AddrStore[21][6] ; Clock    ;
+; N/A                                     ; None                                                ; -3.855 ns ; data_IN[3] ; AddrStore[27][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.895 ns ; data_IN[3] ; AddrStore[19][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.896 ns ; data_IN[3] ; AddrStore[23][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.899 ns ; data_IN[6] ; AddrStore[25][6] ; Clock    ;
+; N/A                                     ; None                                                ; -3.906 ns ; data_IN[6] ; AddrStore[22][6] ; Clock    ;
+; N/A                                     ; None                                                ; -3.930 ns ; data_IN[3] ; AddrStore[25][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.948 ns ; data_IN[3] ; AddrStore[29][3] ; Clock    ;
+; N/A                                     ; None                                                ; -3.950 ns ; data_IN[3] ; AddrStore[26][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.022 ns ; data_IN[6] ; AddrStore[13][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.065 ns ; data_IN[0] ; AddrStore[15][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.067 ns ; data_IN[0] ; AddrStore[21][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.088 ns ; data_IN[5] ; AddrStore[14][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.098 ns ; data_IN[0] ; AddrStore[27][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.109 ns ; data_IN[4] ; AddrStore[27][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.111 ns ; data_IN[4] ; AddrStore[20][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.149 ns ; data_IN[1] ; AddrStore[13][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.150 ns ; data_IN[1] ; AddrStore[15][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.160 ns ; data_IN[6] ; AddrStore[18][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.164 ns ; data_IN[1] ; AddrStore[21][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.177 ns ; data_IN[6] ; AddrStore[23][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.177 ns ; data_IN[6] ; AddrStore[19][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.192 ns ; data_IN[6] ; AddrStore[29][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.194 ns ; data_IN[6] ; AddrStore[26][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.209 ns ; data_IN[4] ; AddrStore[26][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.219 ns ; data_IN[1] ; AddrStore[26][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.230 ns ; data_IN[2] ; AddrStore[26][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.231 ns ; data_IN[4] ; AddrStore[22][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.233 ns ; data_IN[2] ; AddrStore[29][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.235 ns ; data_IN[7] ; AddrStore[28][7] ; Clock    ;
+; N/A                                     ; None                                                ; -4.236 ns ; data_IN[7] ; AddrStore[18][7] ; Clock    ;
+; N/A                                     ; None                                                ; -4.236 ns ; data_IN[7] ; AddrStore[2][7]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.259 ns ; Initialize ; AddrStore[14][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.281 ns ; Initialize ; AddrStore[31][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.281 ns ; Initialize ; AddrStore[31][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.285 ns ; data_IN[2] ; AddrStore[21][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.298 ns ; data_IN[5] ; AddrStore[24][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.305 ns ; data_IN[5] ; AddrStore[22][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.306 ns ; data_IN[5] ; AddrStore[20][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.318 ns ; data_IN[7] ; AddrStore[24][7] ; Clock    ;
+; N/A                                     ; None                                                ; -4.318 ns ; data_IN[5] ; AddrStore[18][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.332 ns ; data_IN[1] ; AddrStore[27][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.332 ns ; Initialize ; AddrStore[13][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.332 ns ; Initialize ; AddrStore[13][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.333 ns ; Initialize ; AddrStore[13][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.336 ns ; data_IN[7] ; AddrStore[23][7] ; Clock    ;
+; N/A                                     ; None                                                ; -4.336 ns ; Initialize ; AddrStore[13][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.336 ns ; Initialize ; AddrStore[13][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.344 ns ; data_IN[4] ; AddrStore[18][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.347 ns ; data_IN[4] ; AddrStore[28][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.381 ns ; data_IN[4] ; AddrStore[23][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.382 ns ; data_IN[4] ; AddrStore[19][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.448 ns ; data_IN[3] ; AddrStore[24][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.450 ns ; data_IN[2] ; AddrStore[25][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.452 ns ; data_IN[2] ; AddrStore[23][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.453 ns ; data_IN[2] ; AddrStore[19][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.456 ns ; data_IN[2] ; AddrStore[4][2]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.462 ns ; data_IN[4] ; AddrStore[1][4]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.464 ns ; data_IN[4] ; AddrStore[9][4]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.464 ns ; addr[0]    ; data_Out[5]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.465 ns ; data_IN[3] ; AddrStore[18][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.465 ns ; Initialize ; AddrStore[30][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.467 ns ; data_IN[3] ; AddrStore[20][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.467 ns ; data_IN[3] ; AddrStore[22][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.470 ns ; data_IN[0] ; AddrStore[22][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.477 ns ; data_IN[2] ; AddrStore[24][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.489 ns ; data_IN[5] ; AddrStore[26][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.489 ns ; data_IN[5] ; AddrStore[29][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.489 ns ; addr[0]    ; data_Out[2]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.490 ns ; data_IN[2] ; AddrStore[20][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.493 ns ; addr[0]    ; data_Out[4]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.498 ns ; addr[0]    ; data_Out[7]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.506 ns ; addr[0]    ; data_Out[6]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.511 ns ; data_IN[1] ; AddrStore[28][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.513 ns ; data_IN[1] ; AddrStore[22][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.522 ns ; addr[0]    ; data_Out[3]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.534 ns ; data_IN[3] ; AddrStore[0][3]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.536 ns ; data_IN[0] ; AddrStore[20][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.545 ns ; Initialize ; AddrStore[15][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.547 ns ; Initialize ; AddrStore[15][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.547 ns ; Initialize ; AddrStore[15][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.555 ns ; Initialize ; AddrStore[11][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.565 ns ; data_IN[0] ; AddrStore[26][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.566 ns ; data_IN[0] ; AddrStore[29][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.575 ns ; addr[4]    ; data_Out[1]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.583 ns ; data_IN[6] ; AddrStore[20][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.588 ns ; addr[0]    ; data_Out[0]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.590 ns ; data_IN[2] ; AddrStore[27][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.617 ns ; data_IN[1] ; AddrStore[29][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.618 ns ; data_IN[4] ; AddrStore[29][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.627 ns ; addr[0]    ; data_Out[1]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.636 ns ; data_IN[5] ; AddrStore[25][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.656 ns ; data_IN[1] ; AddrStore[20][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.665 ns ; data_IN[0] ; AddrStore[24][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.682 ns ; data_IN[7] ; AddrStore[22][7] ; Clock    ;
+; N/A                                     ; None                                                ; -4.683 ns ; data_IN[7] ; AddrStore[19][7] ; Clock    ;
+; N/A                                     ; None                                                ; -4.685 ns ; data_IN[4] ; AddrStore[5][4]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.686 ns ; data_IN[7] ; AddrStore[27][7] ; Clock    ;
+; N/A                                     ; None                                                ; -4.686 ns ; data_IN[6] ; AddrStore[9][6]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.712 ns ; data_IN[0] ; AddrStore[13][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.721 ns ; data_IN[6] ; AddrStore[24][6] ; Clock    ;
+; N/A                                     ; None                                                ; -4.731 ns ; data_IN[2] ; AddrStore[28][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.734 ns ; data_IN[4] ; AddrStore[10][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.757 ns ; data_IN[4] ; AddrStore[11][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.767 ns ; data_IN[4] ; AddrStore[8][4]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.769 ns ; data_IN[4] ; AddrStore[14][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.771 ns ; data_IN[1] ; AddrStore[11][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.782 ns ; data_IN[3] ; AddrStore[11][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.819 ns ; addr[4]    ; data_Out[3]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.825 ns ; data_IN[7] ; AddrStore[25][7] ; Clock    ;
+; N/A                                     ; None                                                ; -4.831 ns ; data_IN[1] ; AddrStore[24][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.860 ns ; data_IN[5] ; AddrStore[31][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.860 ns ; data_IN[5] ; AddrStore[27][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.862 ns ; addr[4]    ; data_Out[7]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.865 ns ; data_IN[2] ; AddrStore[18][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.870 ns ; Initialize ; AddrStore[2][7]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.876 ns ; data_IN[2] ; AddrStore[22][2] ; Clock    ;
+; N/A                                     ; None                                                ; -4.881 ns ; data_IN[3] ; AddrStore[5][3]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.882 ns ; addr[4]    ; data_Out[4]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.887 ns ; Initialize ; AddrStore[4][2]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.894 ns ; data_IN[0] ; AddrStore[25][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.912 ns ; addr[4]    ; AddrStore[7][0]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.923 ns ; data_IN[5] ; AddrStore[21][5] ; Clock    ;
+; N/A                                     ; None                                                ; -4.926 ns ; addr[4]    ; data_Out[0]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.933 ns ; data_IN[0] ; AddrStore[11][0] ; Clock    ;
+; N/A                                     ; None                                                ; -4.941 ns ; data_IN[1] ; AddrStore[25][1] ; Clock    ;
+; N/A                                     ; None                                                ; -4.959 ns ; addr[4]    ; data_Out[2]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -4.962 ns ; addr[4]    ; AddrStore[2][0]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.962 ns ; addr[4]    ; AddrStore[2][1]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.962 ns ; addr[4]    ; AddrStore[2][2]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.964 ns ; data_IN[3] ; AddrStore[14][3] ; Clock    ;
+; N/A                                     ; None                                                ; -4.965 ns ; data_IN[3] ; AddrStore[8][3]  ; Clock    ;
+; N/A                                     ; None                                                ; -4.994 ns ; data_IN[4] ; AddrStore[25][4] ; Clock    ;
+; N/A                                     ; None                                                ; -4.997 ns ; Initialize ; AddrStore[9][6]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.023 ns ; data_IN[1] ; AddrStore[18][1] ; Clock    ;
+; N/A                                     ; None                                                ; -5.025 ns ; addr[4]    ; data_Out[5]~reg0 ; Clock    ;
+; N/A                                     ; None                                                ; -5.026 ns ; Initialize ; AddrStore[15][4] ; Clock    ;
+; N/A                                     ; None                                                ; -5.033 ns ; data_IN[5] ; AddrStore[28][5] ; Clock    ;
+; N/A                                     ; None                                                ; -5.049 ns ; Initialize ; AddrStore[12][7] ; Clock    ;
+; N/A                                     ; None                                                ; -5.066 ns ; data_IN[7] ; AddrStore[21][7] ; Clock    ;
+; N/A                                     ; None                                                ; -5.073 ns ; data_IN[7] ; AddrStore[20][7] ; Clock    ;
+; N/A                                     ; None                                                ; -5.079 ns ; data_IN[7] ; AddrStore[12][7] ; Clock    ;
+; N/A                                     ; None                                                ; -5.081 ns ; data_IN[7] ; AddrStore[26][7] ; Clock    ;
+; N/A                                     ; None                                                ; -5.082 ns ; data_IN[7] ; AddrStore[29][7] ; Clock    ;
+; N/A                                     ; None                                                ; -5.090 ns ; data_IN[1] ; AddrStore[23][1] ; Clock    ;
+; N/A                                     ; None                                                ; -5.093 ns ; data_IN[1] ; AddrStore[19][1] ; Clock    ;
+; N/A                                     ; None                                                ; -5.118 ns ; data_IN[3] ; AddrStore[6][3]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.121 ns ; data_IN[2] ; AddrStore[30][2] ; Clock    ;
+; N/A                                     ; None                                                ; -5.122 ns ; data_IN[5] ; AddrStore[9][5]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.132 ns ; data_IN[3] ; AddrStore[2][3]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.133 ns ; data_IN[5] ; AddrStore[13][5] ; Clock    ;
+; N/A                                     ; None                                                ; -5.158 ns ; data_IN[1] ; AddrStore[9][1]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.160 ns ; data_IN[6] ; AddrStore[11][6] ; Clock    ;
+; N/A                                     ; None                                                ; -5.161 ns ; data_IN[6] ; AddrStore[15][6] ; Clock    ;
+; N/A                                     ; None                                                ; -5.162 ns ; data_IN[0] ; AddrStore[28][0] ; Clock    ;
+; N/A                                     ; None                                                ; -5.166 ns ; Initialize ; AddrStore[11][1] ; Clock    ;
+; N/A                                     ; None                                                ; -5.168 ns ; Initialize ; AddrStore[11][2] ; Clock    ;
+; N/A                                     ; None                                                ; -5.172 ns ; Initialize ; AddrStore[1][2]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.204 ns ; Initialize ; AddrStore[1][4]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.206 ns ; Initialize ; AddrStore[9][4]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.213 ns ; Initialize ; AddrStore[2][0]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.213 ns ; Initialize ; AddrStore[2][1]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.213 ns ; Initialize ; AddrStore[2][2]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.217 ns ; data_IN[4] ; AddrStore[6][4]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.228 ns ; data_IN[4] ; AddrStore[15][4] ; Clock    ;
+; N/A                                     ; None                                                ; -5.249 ns ; data_IN[6] ; AddrStore[5][6]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.249 ns ; data_IN[4] ; AddrStore[21][4] ; Clock    ;
+; N/A                                     ; None                                                ; -5.252 ns ; addr[4]    ; AddrStore[11][2] ; Clock    ;
+; N/A                                     ; None                                                ; -5.254 ns ; data_IN[6] ; AddrStore[17][6] ; Clock    ;
+; N/A                                     ; None                                                ; -5.254 ns ; data_IN[0] ; AddrStore[0][0]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.256 ns ; addr[4]    ; AddrStore[1][2]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.259 ns ; data_IN[0] ; AddrStore[18][0] ; Clock    ;
+; N/A                                     ; None                                                ; -5.262 ns ; Initialize ; AddrStore[7][0]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.263 ns ; data_IN[6] ; AddrStore[7][6]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.279 ns ; data_IN[5] ; AddrStore[1][5]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.287 ns ; data_IN[0] ; AddrStore[30][0] ; Clock    ;
+; N/A                                     ; None                                                ; -5.290 ns ; data_IN[3] ; AddrStore[4][3]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.290 ns ; data_IN[0] ; AddrStore[7][0]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.292 ns ; data_IN[3] ; AddrStore[31][3] ; Clock    ;
+; N/A                                     ; None                                                ; -5.293 ns ; Initialize ; AddrStore[9][5]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.301 ns ; data_IN[1] ; AddrStore[1][1]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.301 ns ; data_IN[1] ; AddrStore[0][1]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.304 ns ; Initialize ; AddrStore[13][5] ; Clock    ;
+; N/A                                     ; None                                                ; -5.309 ns ; data_IN[5] ; AddrStore[10][5] ; Clock    ;
+; N/A                                     ; None                                                ; -5.313 ns ; data_IN[0] ; AddrStore[31][0] ; Clock    ;
+; N/A                                     ; None                                                ; -5.318 ns ; data_IN[5] ; AddrStore[23][5] ; Clock    ;
+; N/A                                     ; None                                                ; -5.318 ns ; data_IN[5] ; AddrStore[19][5] ; Clock    ;
+; N/A                                     ; None                                                ; -5.330 ns ; data_IN[3] ; AddrStore[7][3]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.337 ns ; Initialize ; AddrStore[5][0]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.341 ns ; Initialize ; AddrStore[9][1]  ; Clock    ;
+; N/A                                     ; None                                                ; -5.352 ns ; data_IN[4] ; AddrStore[16][4] ; Clock    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;            ;                  ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+------------+------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Tue Dec 15 16:16:41 2015
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off lab2 -c lab2 --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Clock" is an undefined clock
+Info: Clock "Clock" has Internal fmax of 180.15 MHz between source register "AddrStore[7][2]" and destination register "data_Out[2]~reg0" (period= 5.551 ns)
+    Info: + Longest register to register delay is 5.317 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X31_Y19_N7; Fanout = 1; REG Node = 'AddrStore[7][2]'
+        Info: 2: + IC(1.215 ns) + CELL(0.178 ns) = 1.393 ns; Loc. = LCCOMB_X29_Y21_N22; Fanout = 1; COMB Node = 'Mux5~2'
+        Info: 3: + IC(0.797 ns) + CELL(0.178 ns) = 2.368 ns; Loc. = LCCOMB_X31_Y21_N4; Fanout = 1; COMB Node = 'Mux5~3'
+        Info: 4: + IC(1.152 ns) + CELL(0.178 ns) = 3.698 ns; Loc. = LCCOMB_X29_Y19_N4; Fanout = 1; COMB Node = 'Mux5~6'
+        Info: 5: + IC(0.883 ns) + CELL(0.178 ns) = 4.759 ns; Loc. = LCCOMB_X30_Y22_N22; Fanout = 1; COMB Node = 'Mux5~9'
+        Info: 6: + IC(0.284 ns) + CELL(0.178 ns) = 5.221 ns; Loc. = LCCOMB_X30_Y22_N16; Fanout = 1; COMB Node = 'Mux5~20'
+        Info: 7: + IC(0.000 ns) + CELL(0.096 ns) = 5.317 ns; Loc. = LCFF_X30_Y22_N17; Fanout = 1; REG Node = 'data_Out[2]~reg0'
+        Info: Total cell delay = 0.986 ns ( 18.54 % )
+        Info: Total interconnect delay = 4.331 ns ( 81.46 % )
+    Info: - Smallest clock skew is 0.005 ns
+        Info: + Shortest clock path from clock "Clock" to destination register is 2.851 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'Clock'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 264; COMB Node = 'Clock~clkctrl'
+            Info: 3: + IC(0.985 ns) + CELL(0.602 ns) = 2.851 ns; Loc. = LCFF_X30_Y22_N17; Fanout = 1; REG Node = 'data_Out[2]~reg0'
+            Info: Total cell delay = 1.628 ns ( 57.10 % )
+            Info: Total interconnect delay = 1.223 ns ( 42.90 % )
+        Info: - Longest clock path from clock "Clock" to source register is 2.846 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'Clock'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 264; COMB Node = 'Clock~clkctrl'
+            Info: 3: + IC(0.980 ns) + CELL(0.602 ns) = 2.846 ns; Loc. = LCFF_X31_Y19_N7; Fanout = 1; REG Node = 'AddrStore[7][2]'
+            Info: Total cell delay = 1.628 ns ( 57.20 % )
+            Info: Total interconnect delay = 1.218 ns ( 42.80 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Micro setup delay of destination is -0.038 ns
+Info: tsu for register "AddrStore[10][0]" (data pin = "addr[3]", clock pin = "Clock") is 10.278 ns
+    Info: + Longest pin to register delay is 13.163 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_G3; Fanout = 74; PIN Node = 'addr[3]'
+        Info: 2: + IC(7.274 ns) + CELL(0.477 ns) = 8.615 ns; Loc. = LCCOMB_X33_Y19_N22; Fanout = 2; COMB Node = 'Decoder0~9'
+        Info: 3: + IC(1.569 ns) + CELL(0.521 ns) = 10.705 ns; Loc. = LCCOMB_X29_Y19_N20; Fanout = 8; COMB Node = 'AddrStore[10][0]~19'
+        Info: 4: + IC(1.700 ns) + CELL(0.758 ns) = 13.163 ns; Loc. = LCFF_X33_Y21_N9; Fanout = 1; REG Node = 'AddrStore[10][0]'
+        Info: Total cell delay = 2.620 ns ( 19.90 % )
+        Info: Total interconnect delay = 10.543 ns ( 80.10 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "Clock" to destination register is 2.847 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'Clock'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 264; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(0.981 ns) + CELL(0.602 ns) = 2.847 ns; Loc. = LCFF_X33_Y21_N9; Fanout = 1; REG Node = 'AddrStore[10][0]'
+        Info: Total cell delay = 1.628 ns ( 57.18 % )
+        Info: Total interconnect delay = 1.219 ns ( 42.82 % )
+Info: tco from clock "Clock" to destination pin "data_Out[1]" through register "data_Out[1]~reg0" is 9.180 ns
+    Info: + Longest clock path from clock "Clock" to source register is 2.847 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'Clock'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 264; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(0.981 ns) + CELL(0.602 ns) = 2.847 ns; Loc. = LCFF_X33_Y19_N9; Fanout = 1; REG Node = 'data_Out[1]~reg0'
+        Info: Total cell delay = 1.628 ns ( 57.18 % )
+        Info: Total interconnect delay = 1.219 ns ( 42.82 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 6.056 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X33_Y19_N9; Fanout = 1; REG Node = 'data_Out[1]~reg0'
+        Info: 2: + IC(3.070 ns) + CELL(2.986 ns) = 6.056 ns; Loc. = PIN_V15; Fanout = 0; PIN Node = 'data_Out[1]'
+        Info: Total cell delay = 2.986 ns ( 49.31 % )
+        Info: Total interconnect delay = 3.070 ns ( 50.69 % )
+Info: th for register "AddrStore[13][4]" (data pin = "data_IN[4]", clock pin = "Clock") is -3.590 ns
+    Info: + Longest clock path from clock "Clock" to destination register is 2.846 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'Clock'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 264; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(0.980 ns) + CELL(0.602 ns) = 2.846 ns; Loc. = LCFF_X31_Y21_N9; Fanout = 1; REG Node = 'AddrStore[13][4]'
+        Info: Total cell delay = 1.628 ns ( 57.20 % )
+        Info: Total interconnect delay = 1.218 ns ( 42.80 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 6.722 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.833 ns) = 0.833 ns; Loc. = PIN_F13; Fanout = 14; PIN Node = 'data_IN[4]'
+        Info: 2: + IC(5.615 ns) + CELL(0.178 ns) = 6.626 ns; Loc. = LCCOMB_X31_Y21_N8; Fanout = 13; COMB Node = 'AddrStore~40'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 6.722 ns; Loc. = LCFF_X31_Y21_N9; Fanout = 1; REG Node = 'AddrStore[13][4]'
+        Info: Total cell delay = 1.107 ns ( 16.47 % )
+        Info: Total interconnect delay = 5.615 ns ( 83.53 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 162 megabytes
+    Info: Processing ended: Tue Dec 15 16:16:44 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:00
+
+
