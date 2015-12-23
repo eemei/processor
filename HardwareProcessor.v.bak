@@ -26,7 +26,7 @@ assign Initialize = SW[8];
 assign Enter = SW[9];
 assign Reset = KEY[0];
 assign LEDG [7:4] = state;
-//assign LEDR [7:0] = Output;
+assign LEDR [7:0] = Output;
 
 
 assign LEDR[9:0] = {Output, Halt};
