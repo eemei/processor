@@ -13,22 +13,18 @@ module Processor_tb();
   reg Enter;
 	reg [7:0] Input;
 	reg Clock, Reset;
-	wire [7:0] Output;
 	wire Halt;
-	
-	wire [1:0] Asel;
-	wire [7:0] Q_ram, Q_A;
-	wire [4:0] Q_Meminst; 
+	wire [7:0] Output;
 	reg Initialize;
+	
 	wire [3:0] state;
-	wire [2:0] IR;
 
   integer error, i;
 	reg  [7:0] expectedValue, X, Y;
 
 //Processor mine ( clock, reset, Enter, cheat, Minput,
 //                 Halt, Moutput, DisplayState, IR75);
-EC2_microprocessor ProcessorTB (Enter, Input, Clock, Reset, Halt,   Q_Meminst, Q_ram, Q_A, Asel,   Output,Initialize, state, IR);
+EC2_microprocessor ProceesorTB(Enter, Input, Clock, Reset, Halt, Output,Initialize, state );
 
 /************************* GLOBAL INITIAL CLOCK and GLOBAL INITIAL RESET **********************/
 initial
@@ -45,13 +41,13 @@ begin
   forever #1 Clock = ~Clock;
 end
 
-initial
-begin
-  $display ("X      Y   Output");
-  $monitor ("%d %d  %d", X,Y, Output);
+//initial
+//begin
+  //$display ("X      Y   Output");
+  //$monitor ("%d %d  %d", X,Y, Output);
   //$display("clk | reset | Enter | cheat | Minput | Halt| Moutput| State| IR75");
   //$monitor("%b   | %b     | %b     |  %b   |    %d  |  %b  |   %d   | %b | %b ", Clock, Reset, Enter, Initialize, Input, Halt, Output, state, IR);
-end
+//end
 
 initial
 begin

@@ -25,7 +25,7 @@ module CU (Reset, Clock, IRload, Aload, Sub, JMPmux, PCload, Meminst, MemWr, Hal
 		halt=4'b1111;
 				      
 	//......code begin here...............			      
-	always@(negedge Reset, negedge Clock)
+	always@(negedge Reset, posedge Clock)
 	begin
 		if (~Reset)
 			state<= start;
@@ -82,6 +82,7 @@ module CU (Reset, Clock, IRload, Aload, Sub, JMPmux, PCload, Meminst, MemWr, Hal
 			  3'b101 : nstate= jz;
 			  3'b110 : nstate= jpos;
 			  3'b111 : nstate= halt;
+			  default : nstate = decode;
 			  endcase
 			end
 			

@@ -1,0 +1,16 @@
+module mux2_4 ( sel, a, b, c, d, Q);
+
+	input [1:0]sel;
+	input [7:0]a, b, c, d;
+	output reg [7:0] Q;
+
+
+	always@(sel, a, b, c, d)
+	case (sel)
+		2'b00: Q = a;
+		2'b01: Q = b;
+		2'b10: Q = c;
+		2'b11: Q = d;
+		default 2'b11 : Q= d; //Q = 2'bxx;
+	endcase
+endmodule 

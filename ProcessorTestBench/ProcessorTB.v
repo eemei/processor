@@ -1,24 +1,20 @@
 module ProcessorTB ();
 
-	reg Enter;
+	 reg Enter;
 	reg [7:0] Input;
 	reg Clock, Reset;
-	wire [7:0] Output;
 	wire Halt;
-	
-	wire [1:0] Asel;
-	wire [7:0] Q_ram, Q_A;
-	wire [4:0] Q_Meminst; 
+	wire [7:0] Output;
 	reg Initialize;
+	
 	wire [3:0] state;
-	wire [2:0] IR;
 
 integer error;
 integer j,i;
 reg[7:0] X, Y;
 
 // instantiate 
-EC2_microprocessor ProcessorTB (Enter, Input, Clock, Reset, Halt,   Q_Meminst, Q_ram, Q_A, Asel,   Output,Initialize, state, IR);
+EC2_microprocessor ProceesorTB(Enter, Input, Clock, Reset, Halt, Output,Initialize, state );
 
 initial begin
 Clock <= 0;

@@ -13,22 +13,18 @@ module Processor_tb();
   reg Enter;
 	reg [7:0] Input;
 	reg Clock, Reset;
-	wire [7:0] Output;
 	wire Halt;
-	
-	wire [1:0] Asel;
-	wire [7:0] Q_ram, Q_A;
-	wire [4:0] Q_Meminst; 
+	wire [7:0] Output;
 	reg Initialize;
+	
 	wire [3:0] state;
-	wire [2:0] IR;
 
   integer error, i;
 	reg  [7:0] expectedValue, X, Y;
 
 //Processor mine ( clock, reset, Enter, cheat, Minput,
 //                 Halt, Moutput, DisplayState, IR75);
-EC2_microprocessor ProcessorTB (Enter, Input, Clock, Reset, Halt,   Q_Meminst, Q_ram, Q_A, Asel,   Output,Initialize, state, IR);
+EC2_microprocessor ProceesorTB(Enter, Input, Clock, Reset, Halt, Output,Initialize, state );
 
 /************************* GLOBAL INITIAL CLOCK and GLOBAL INITIAL RESET **********************/
 initial
@@ -117,7 +113,7 @@ begin
       $display(" !!!!!! ERROR !!!!!!  expected output = %d, actual output = %d", expectedValue, Output);
     end
     else
-      $display("***************************** PASS with %d time *************************************", (i + 1));
+      $display("******output = %d*********** PASS with %d time *************************************", Output, (i + 1));
 
 end
 endtask

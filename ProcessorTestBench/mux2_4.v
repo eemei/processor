@@ -11,6 +11,6 @@ module mux2_4 ( sel, a, b, c, d, Q);
 		2'b01: Q = b;
 		2'b10: Q = c;
 		2'b11: Q = d;
-		default; //Q = 2'bxx;
+		default Q = 2'b11;
 	endcase
 endmodule 

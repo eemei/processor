@@ -5,13 +5,16 @@ module register8bit #(parameter SIZE = 8)(Q,D,load,Clock,Reset);
 	input load, Clock, Reset;
 	
 
- always @(posedge Clock or negedge Reset)
+ always @(posedge Clock , negedge Reset) begin
 
  if (!Reset) 
 	Q <= 0;
- else if (load) 
+ else begin 
+  if (load) 
 	Q <= D;
 	else 
 	Q <= Q;
+	end
+end	
 
 endmodule

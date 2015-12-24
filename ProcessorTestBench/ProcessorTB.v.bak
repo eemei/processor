@@ -1,17 +1,13 @@
 module ProcessorTB ();
 
-	reg Enter;
+	 reg Enter;
 	reg [7:0] Input;
 	reg Clock, Reset;
-	wire [7:0] Output;
 	wire Halt;
-	
-	wire [1:0] Asel;
-	wire [7:0] Q_ram, Q_A;
-	wire [4:0] Q_Meminst; 
+	wire [7:0] Output;
 	reg Initialize;
+	
 	wire [3:0] state;
-	wire [2:0] IR;
 
 integer error;
 integer j,i;
@@ -78,11 +74,11 @@ task Algorithm_Program;
 endtask
 
 // task Display;
- initial
-   begin
-   $display ("time                  clock  Input      Output    Enter  Halt       X   Y   Ir");
-   $monitor ("%d     %d    %b   %d    %d   %d   %d  %d   %b",$time, Clock, Input, Output, Enter, Halt,X,Y,IR );
-   end
+ //initial
+  // begin
+  //  $display ("time                  clock  Input      Output    Enter  Halt       X   Y   Ir");
+  //  $monitor ("%d     %d    %b   %d    %d   %d   %d  %d   %b",$time, Clock, Input, Output, Enter, Halt,X,Y,IR );
+  // end
  //  endtask
   
   // outputs verification 

@@ -9,14 +9,10 @@ module HardwareProcessor(input [9:0] SW,
 	wire [7:0] Input;
 	wire Clock, Reset;
 	wire [7:0] Output;
-	wire Halt;
+	wire  Halt;
 	
-	wire [7:0] Q_ram, Q_A;
-	wire [4:0] Q_Meminst; 
-	wire [1:0] Asel;
-	wire Initialize;
-	wire [3:0] state;
-	wire [2:0] IR;               
+	wire  Initialize;
+	wire  [3:0] state;         
                
                
               
@@ -32,7 +28,7 @@ assign LEDG [7:4] = state;
 assign LEDR[9:0] = {Output, Halt};
 
 Part1 Clockdiv (CLOCK_50, CLOCKOUT);	
-EC2_microprocessor  ProcessorH (Enter, Input, CLOCKOUT, Reset, Halt,   Q_Meminst, Q_ram, Q_A,Asel,   Output,Initialize, state, IR );
+EC2_microprocessor (Enter, Input, CLOCKOUT, Reset, Halt, Output,Initialize, state );
 
 
 

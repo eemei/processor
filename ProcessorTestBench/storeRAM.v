@@ -1,11 +1,11 @@
-module storeRAM (Clock, Reset, WE, data_IN, data_Out, Initialize, addr);
+module storeRAM (Clock, WE, data_IN, data_Out, Initialize, addr);
 
-input Clock, Reset, WE, Initialize; 
+input Clock, WE, Initialize; 
 input [4:0] addr; 
 input [7:0] data_IN;
 output reg [7:0] data_Out;
 
-reg [7:0] AddrStore [32:0];
+reg [7:0] AddrStore [31:0];
 
 always @(posedge Clock)
 	begin
@@ -35,9 +35,9 @@ always @(posedge Clock)
 		else
 		begin	
 			if (WE)
-				AddrStore[addr] <= data_IN;
+				AddrStore[addr] = data_IN;
 			else 
-				data_Out <= AddrStore[addr];
+				data_Out = AddrStore[addr];
 		end			
 	end
 
